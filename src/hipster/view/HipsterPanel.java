@@ -12,6 +12,8 @@ public class HipsterPanel extends JPanel
 	private SpringLayout baseLayout;
 	private HipsterController baseController;
 	private JComboBox<String> phraseComboBox;
+	private JLabel showText;
+	
 	
 	private int maxClicks;
 	private int startClick;
@@ -21,6 +23,7 @@ public class HipsterPanel extends JPanel
 		baseLayout = new SpringLayout();
 		this.baseController = baseController;
 
+		showText = new JLabel("I listened to dubstep before everyone else did. Now it sucks.");
 		
 		phraseComboBox = new JComboBox<String>();
 		maxClicks = baseController.getFirstHipster().getHipsterBooks().length;
@@ -43,11 +46,14 @@ public class HipsterPanel extends JPanel
 	{
 		this.setLayout(baseLayout);
 		this.add(phraseComboBox);
+		this.add(showText);
+
 	}
 	
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.NORTH, showText, 0, SpringLayout.NORTH, phraseComboBox);
+		baseLayout.putConstraint(SpringLayout.WEST, showText, 30, SpringLayout.EAST, phraseComboBox);
 	}
 	
 	private void setupListeners()
