@@ -2,9 +2,7 @@ package hipster.view;
 
 import hipster.controller.HipsterController;
 import hipster.model.Book;
-
 import javax.swing.*;
-
 import java.awt.*;
 import java.awt.event.*;
 
@@ -49,7 +47,7 @@ public class HipsterPanel extends JPanel
 	private void setupComboBox()
 	{
 		String [] phrases = baseController.getFirstHipster().getHipsterPhrases();
-		DefaultComboBoxModel phraseModel = new DefaultComboBoxModel(phrases);
+		DefaultComboBoxModel<String> phraseModel = new DefaultComboBoxModel<String>(phrases);
 		phraseComboBox.setModel(phraseModel);
 	}
 	

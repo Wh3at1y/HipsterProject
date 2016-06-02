@@ -4,11 +4,9 @@
 package hipster.tests;
 
 import static org.junit.Assert.*;
-
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
 import hipster.view.HipsterPanel;
 import hipster.controller.HipsterController;
 
@@ -52,6 +50,7 @@ public class HipsterPanelTest
 		assertTrue(testPanel.getLayout() instanceof javax.swing.SpringLayout);
 	}
 	
+	@SuppressWarnings("unchecked")
 	@Test
 	public void testSetupListeners()
 	{

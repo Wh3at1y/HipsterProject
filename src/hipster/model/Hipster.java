@@ -26,7 +26,7 @@ public class Hipster
 	
 	private void setupBooks()
 	{
-		Book firstBook, secondBook, thirdBook;
+		Book firstBook, secondBook;
 		
 		firstBook = new Book();
 		firstBook.setAuthor("Neil ArmStrong");
@@ -41,9 +41,6 @@ public class Hipster
 		secondBook.setSubject("Cool Life");
 		secondBook.setPageCount(500);
 		secondBook.setPrice(10.00);
-		
-		//Condenses the lines above, into one line.
-		thirdBook = new Book("", "", "", 250, 9.99);
 		
 		hipsterBooks[0] = firstBook; hipsterBooks[1] = secondBook; hipsterBooks[2] = firstBook;
 	}
